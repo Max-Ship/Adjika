@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="google-site-verification" content="?????????" />
+    <meta
+      name="description"
+      content="Аджика — кофе-бар с кавказской кухней. Заказ навынос, винная карта, проведение банкетов. Можно с ноутбуком и с собакой. В меню: шашлык, хинкали, пироги, люля-кебаб, лагман, салаты, хачапури, супы, блюда на гриле, крылышки."
+    />
+    <meta
+      name="keywords"
+      content="аджика, кофе-бар, кавказская кухня, заказ навынос, винная карта, банкеты, работа с ноутбуком, можно с собакой, шашлык, хинкали, пироги, люля-кебаб, лагман, салаты, хачапури, супы, гриль, крылышки"
+    />
+
+    <meta property="og:title" content="Аджика — кофе-бар с кавказской кухней" />
+    <meta
+      property="og:description"
+      content="Заказ навынос, винная карта, проведение банкетов. Можно с ноутбуком и с собакой. В меню: шашлык, хинкали, пироги, люля-кебаб, лагман, салаты, хачапури, супы, блюда на гриле, крылышки."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://EXAMPLE.COM/" />
+    <meta property="og:image" content="/img/logo.jpg" />
+    <meta property="og:image:alt" content="Логотип кафе-бар Адӏика" />
+    <meta property="og:locale" content="ru_RU" />
+
+    <meta name="robots" content="index, follow" />
+    <title>Аджика — кофе-бар с кавказской кухней.</title>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "jobTitle": "Аджига",
+        "url": "https://EXAMPLE.COM/",
+        "sameAs": ["https://EXAMPLE.COM"],
+        "email": "EXAMPLE@MAIL.COM"
+      }
+    </script>
+
+    <link rel="stylesheet" href="/swiper-bundle.min.css" />
+    <script src="/swiper-bundle.min.js"></script>
+
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/normalize.css" />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <div id="headerContainer" class="container header__container">
+        <img
+          class="header__imgLogo"
+          src="/img/logoSmall.png"
+          width="100"
+          height="30"
+          alt="Логотип. Аджика"
+        />
+        <nav id="headerNav" class="header__nav">
+          <ul class="header__listNavLink">
+            <li class="header__itemLink">
+              <a class="header__link" href="#menu">МЕНЮ</a>
+            </li>
+            <li class="header__itemLink">
+              <a class="header__link" href="#contacts">КОНТАКТЫ</a>
+            </li>
+            <li class="header__itemLink">
+              <a class="header__link" href="#map">КАРТА</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="container hero__container">
+          <h1 class="hero__mainTitle">Аджига - кофе-бар с кавказской кухней</h1>
+          <a class="btn hero__btnDownloadMenu" href="./Menu.pdf" download
+            >Скачать&nbsp;меню</a
+          >
+        </div>
+      </section>
+      <div class="wrapperForBackgrund"></div>
+      <section class="withUs">
+        <div class="container withUs__container">
+          <h2 class="withUs__title sectionTitle">У нас Вы можете:</h2>
+          <div class="swiperContainer swiper">
+            <ul class="swiper-wrapper swiperList">
+              <li
+                class="swiper-slide swiperList__item swiperList__item--background1"
+              >
+                <p class="swiperList__descr">
+                  Провести банкеты, с собаками, с Вашим ноутбуком
+                </p>
+              </li>
+              <li
+                class="swiper-slide swiperList__item swiperList__item--background2"
+              >
+                <p class="swiperList__descr">
+                  Выбрать вино из большой коллекции вин.
+                </p>
+              </li>
+              <li
+                class="swiper-slide swiperList__item swiperList__item--background3"
+              >
+                <p class="swiperList__descr">
+                  Насладиться блюдами кавказкой кухни.
+                </p>
+              </li>
+              <li
+                class="swiper-slide swiperList__item swiperList__item--background4"
+              >
+                <p class="swiperList__descr">
+                  Хорошо провести время с друзьями.
+                </p>
+              </li>
+            </ul>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <section id="menu" class="menu">
+        <div class="container menu__container">
+          <h2 class="menu__title sectionTitle">Наши блюда</h2>
+          <div class="menu__contentWrapper">
+            <div class="customSelectWrapper">
+              <button
+                id="custom-select-button"
+                class="customSelectBtn"
+                type="button"
+                aria-haspopup="listbox"
+                aria-expanded="false"
+              >
+                Выберите меню
+              </button>
+              <ul
+                id="custom-options-list"
+                class="customSelectOptions"
+                role="listbox"
+                aria-labelledby="custom-select-button"
+                tabindex="-1"
+              >
+                <li
+                  id="mainCoursesDishs"
+                  class="customSelectOption"
+                  role="option"
+                  tabindex="0"
+                  data-value="mainCourses"
+                >
+                  Горячие блюда
+                </li>
+                <li
+                  id="mangalDishs"
+                  class="customSelectOption"
+                  role="option"
+                  tabindex="0"
+                  data-value="mangal"
+                >
+                  Мангал
+                </li>
+                <li
+                  id="bakedDishesDishs"
+                  class="customSelectOption"
+                  role="option"
+                  tabindex="0"
+                  data-value="bakedDishes"
+                >
+                  Блюда из печи
+                </li>
+                <li
+                  id="dessertsDishs"
+                  class="customSelectOption"
+                  role="option"
+                  tabindex="0"
+                  data-value="desserts"
+                >
+                  Дессерты
+                </li>
+                <li
+                  id="khinkaliDishs"
+                  class="customSelectOption"
+                  role="option"
+                  tabindex="0"
+                  data-value="khinkali"
+                >
+                  Хинкали
+                </li>
+                <li
+                  id="otherDishs"
+                  class="customSelectOption"
+                  role="option"
+                  tabindex="0"
+                  data-value="other"
+                >
+                  Разное
+                </li>
+              </ul>
+            </div>
+            <div class="menu__priceMenu">
+              <ul id="priceMenu" class="menu__list">
+                <li class="menu__bdImgWrap">
+                  <img
+                    class="menu__bgImg"
+                    src="/img/khinkali.jpg"
+                    alt="Апетитные Хинкали"
+                  />
+                </li>
+                <li class="menu__bdImgWrap">
+                  <img
+                    class="menu__bgImg"
+                    src="/img/guruli.jpg"
+                    alt="Очень вкусное Гурули"
+                  />
+                </li>
+                <li class="menu__bdImgWrap">
+                  <img
+                    class="menu__bgImg"
+                    src="/img/lulakebab.jpg"
+                    alt="Сочный Люля Кебаб"
+                  />
+                </li>
+                <li class="menu__bdImgWrap">
+                  <img
+                    class="menu__bgImg"
+                    src="/img/khachapuriAdjarianStyle.jpg"
+                    alt="Хачапури по аджарски"
+                  />
+                </li>
+                <li class="menu__bdImgWrap">
+                  <img
+                    class="menu__bgImg"
+                    src="/img/chickenChakhokhbili.jpg"
+                    alt="Обалденное Чахохбили из курицы"
+                  />
+                </li>
+                <li class="menu__bdImgWrap">
+                  <img
+                    class="menu__bgImg"
+                    src="/img/tbilisiSalad.jpg"
+                    alt="Полезный салат Тбилиси"
+                  />
+                </li>
+              </ul>
+            </div>
+            <a class="btn menu__btnDownloadMenu" href="./Menu.pdf" download
+              >Скачать&nbsp;меню</a
+            >
+          </div>
+        </div>
+      </section>
+      <div class="wrapperForBackgrund"></div>
+      <section id="contacts" class="contacts">
+        <div class="container contacts__container">
+          <h2 class="contacts__title sectionTitle">Контактная информация</h2>
+          <p class="contacts__textAddress">
+            Телефон:
+            <a
+              class="contacts__linkAddress"
+              href="tel:+79095085151"
+              aria-label="Позвонить по номеру +7 909 508 51 51"
+              >+7 (909) 508-51-51</a
+            >
+            |
+            <a
+              class="contacts__linkAddress"
+              href="https://wa.me/79095085151"
+              target="_blank"
+              rel="noopener"
+              aria-label="Написать в WhatsApp +7 909 508 51 51"
+            >
+              WhatsApp
+            </a>
+          </p>
+          <address class="contacts__address">
+            Адрес: с. Майма, ул. Ленина, 62
+          </address>
+          <p class="contacts__textAddress">
+            <a
+              class="contacts__linkAddress"
+              href="https://instagram.com/adjika_rest04?utm_source=qr"
+              target="_blank"
+              rel="noopener"
+              aria-label="Instagram аккаунт adjika_rest04"
+            >
+              Наш Instagram
+            </a>
+          </p>
+        </div>
+      </section>
+      <section id="map" class="map">
+        <div id="map_container" class="container map__container">
+          <h2 class="map__title sectionTitle">Мы здесь!</h2>
+          <div class="map__wrap">
+            <iframe
+              class="map__iframeMap"
+              src="https://yandex.ru/map-widget/v1/?ll=85.882346,51.993676&z=19&pt=85.882346,51.993676,pm2rdm"
+              width="600"
+              height="400"
+            ></iframe>
+            <div class="map__building">
+              <img
+                class="map__imgBuilding"
+                src="/img/adjika.webp"
+                alt="Вид фасада здания, где находится кофе-бар!"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container footer__container"></div>
+    </footer>
+    <script type="module" src="main.js"></script>
+
+    <template id="menuDishs">
+      <ul id="mainCourses" class="menu__list">
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ДОЛМА</p>
+          <p class="menu__weight">150/30г</p>
+          <p class="menu__price">600₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ГУРУЛИ</p>
+          <p class="menu__weight">250г</p>
+          <p class="menu__price">600₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ЧАХОХБИЛИ ИЗ КУРИЦЫ</p>
+          <p class="menu__weight">350г</p>
+          <p class="menu__price">750₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ЧАШУШУЛИ С ГОВЯДИНОЙ</p>
+          <p class="menu__weight">400г</p>
+          <p class="menu__price">900₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ГРИБЫ ПО-ГРУЗИНСКИ</p>
+          <p class="menu__weight">350г</p>
+          <p class="menu__price">750₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ОДЖАХУРИ ИЗ СВИНИНЫ</p>
+          <p class="menu__weight">300г</p>
+          <p class="menu__price">750₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">УДОН С ОВОЩАМИ</p>
+          <p class="menu__weight">200г</p>
+          <p class="menu__price">550₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ЛОСОСЬ С КАБАЧКОМ В СЛИВОЧНО-ШПИНАТНОМ СОУСЕ</p>
+          <p class="menu__weight">150/100/30г</p>
+          <p class="menu__price">1200₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ТОМЛЕНЫЕ ГОВЯЖЬИ ЩЕЧКИ С КАРТОФЕЛЕМ</p>
+          <p class="menu__weight">150/100/30г</p>
+          <p class="menu__price">1200₽</p>
+        </li>
+      </ul>
+
+      <ul id="mangal" class="menu__list">
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ШАШЛЫК ИЗ СВИНИНЫ</p>
+          <p class="menu__weight">200/30/20г</p>
+          <p class="menu__price">550₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ПО-КАВКАЗСКИ</p>
+          <p class="menu__weight">170/30/20г</p>
+          <p class="menu__price">500₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ШАШЛЫК ИЗ ГОВЯДИНЫ</p>
+          <p class="menu__weight">180/30/20г</p>
+          <p class="menu__price">700₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">СТЕЙК ИЗ СЕМГИ</p>
+          <p class="menu__weight">150г</p>
+          <p class="menu__price">950₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">КУРИНЫЙ ШАШЛЫК</p>
+          <p class="menu__weight">160/30/20г</p>
+          <p class="menu__price">500₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">КУРИЦА ПО-АРАБСКИ</p>
+          <p class="menu__weight">170/30/20г</p>
+          <p class="menu__price">700₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">КУРИНЫЕ СЕРДЕЧКИ</p>
+          <p class="menu__weight">170/30/20г</p>
+          <p class="menu__price">700₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ЛЮЛЯ-КЕБАБ ИЗ КУРИЦЫ</p>
+          <p class="menu__weight">140/30/20г</p>
+          <p class="menu__price">550₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ЛЮЛЯ-КЕБАБ ИЗ ГОВЯДИНЫ</p>
+          <p class="menu__weight">140/30/20г</p>
+          <p class="menu__price">650₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ШАМПИНЬОНЫ НА МАНГАЛЕ</p>
+          <p class="menu__weight">90г</p>
+          <p class="menu__price">400₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">КАРТОФЕЛЬ С САЛОМ</p>
+          <p class="menu__weight">190г</p>
+          <p class="menu__price">280₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ОВОЩИ ГРИЛЬ</p>
+          <p class="menu__weight">200г</p>
+          <p class="menu__price">450₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">СЫР НА МАНГАЛЕ</p>
+          <p class="menu__weight">300г</p>
+          <p class="menu__price">450₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">КУКУРУЗА НА МАНГАЛЕ</p>
+          <p class="menu__weight">200г</p>
+          <p class="menu__price">400₽</p>
+        </li>
+      </ul>
+
+      <ul id="bakedDishes" class="menu__list">
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ХАЧАПУРИ ПО-АДЖАРСКИ</p>
+          <p class="menu__weight">350г</p>
+          <p class="menu__price">650₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ХАЧАПУРИ ПО-МЕГРЕЛЬСКИ</p>
+          <p class="menu__weight">900г</p>
+          <p class="menu__price">1000₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">
+            ОСЕТИНСКИЙ ПИРОГ С СЫРОМ И ЗЕЛЕНЬЮ “КАДЫНДЗДЖИН”
+          </p>
+          <p class="menu__weight">900г</p>
+          <p class="menu__price">1000₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ОСЕТИНСКИЙ ПИРОГ С КУРИЦЕЙ, ГРИБАМИ И СЫРОМ</p>
+          <p class="menu__weight">900г</p>
+          <p class="menu__price">1000₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ШОТИС-ПУРИ</p>
+          <p class="menu__weight">120г</p>
+          <p class="menu__price">100₽</p>
+        </li>
+      </ul>
+
+      <ul id="khinkali" class="menu__list">
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ХИНКАЛИ С ГОВЯДИНОЙ</p>
+          <p class="menu__weight">90г</p>
+          <p class="menu__price">130₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ХИНКАЛИ С ГОВЯДИНОЙ И СВИНИНОЙ</p>
+          <p class="menu__weight">90г</p>
+          <p class="menu__price">120₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ХИНКАЛИ С БАРАНИНОЙ</p>
+          <p class="menu__weight">90г</p>
+          <p class="menu__price">140₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ХИНКАЛИ С СЫРОМ</p>
+          <p class="menu__weight">90г</p>
+          <p class="menu__price">140₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ХИНКАЛИ В СЛИВОЧНОМ СОУСЕ</p>
+          <p class="menu__weight">90г</p>
+          <p class="menu__price">300₽</p>
+        </li>
+      </ul>
+
+      <ul id="desserts" class="menu__list">
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ТОРТ МЕДОВИК</p>
+          <p class="menu__weight">900г</p>
+          <p class="menu__price">1000₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">АННА ПАВЛОВА</p>
+          <p class="menu__weight">900г</p>
+          <p class="menu__price">1000₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ШОКОЛАДНЫЙ ФОНДАН С МОРОЖЕНЫМ</p>
+          <p class="menu__weight">900г</p>
+          <p class="menu__price">1000₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ВИШНЕВЫЙ ТРАЙФЛ</p>
+          <p class="menu__weight">120г</p>
+          <p class="menu__price">100₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">МОРОЖЕНОЕ В АССОРТИМЕНТЕ</p>
+          <p class="menu__weight">170г</p>
+          <p class="menu__price">500₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ПАХЛАВА</p>
+          <p class="menu__weight">150г</p>
+          <p class="menu__price">750₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ЧИЗКЕЙК В АССОРТИМЕНТЕ</p>
+          <p class="menu__weight">120г</p>
+          <p class="menu__price">800₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">АЛТАЙСКАЯ КЛАДОВАЯ</p>
+          <p class="menu__weight">200г</p>
+          <p class="menu__price">650₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ДЕСЕРТ ХИНКАЛЬ</p>
+          <p class="menu__weight">1 шарик</p>
+          <p class="menu__price">100₽</p>
+        </li>
+      </ul>
+
+      <ul id="other" class="menu__list">
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ЗАКУСКИ</p>
+          <p class="menu__weight">160г</p>
+          <p class="menu__price">от 450₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">СУПЫ</p>
+          <p class="menu__weight">250г</p>
+          <p class="menu__price">от 400₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ГАРНИРЫ</p>
+          <p class="menu__weight">150г</p>
+          <p class="menu__price">от 200₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ПИЦЦА</p>
+          <p class="menu__weight">550г</p>
+          <p class="menu__price">от 750₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ЧАИ / АВТОРСКИЕ ЧАЙ</p>
+          <p class="menu__weight">500мл / 1л</p>
+          <p class="menu__price">350₽ / 600₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">МОЛОЧНЫЕ КОКТЕЙЛИ</p>
+          <p class="menu__weight">330мл</p>
+          <p class="menu__price">300₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">АЛКОГОЛЬНЫЕ КОКТЕЙЛИ</p>
+          <p class="menu__weight">60мл</p>
+          <p class="menu__price">от 400₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">НАСТОЙКИ</p>
+          <p class="menu__weight">50мл</p>
+          <p class="menu__price">от 370₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">ВОДКА / ВИСКИ / ДЖИН / ТЕКИЛА / КОНЬЯК</p>
+          <p class="menu__weight">50мл</p>
+          <p class="menu__price">от 150₽ / 430₽ / 255₽ / 590₽ / 540₽</p>
+        </li>
+        <li class="menu__item" tabindex="0">
+          <p class="menu__dish">
+            Всё это и многое другое вы можете посмотреть, скачав наше меню!
+          </p>
+          <p class="menu__weight"></p>
+          <p class="menu__price"></p>
+        </li>
+      </ul>
+    </template>
+  </body>
+</html>
