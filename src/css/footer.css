@@ -1,0 +1,16 @@
+.footer {
+  padding: 50px;
+  background: url("/img/ornament.png") repeat center / contain;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding: 40px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer {
+    padding: 30px;
+  }
+}

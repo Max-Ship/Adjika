@@ -1,0 +1,104 @@
+.map {
+  height: calc(100vh + 500px);
+  color: white;
+}
+
+.map__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  height: inherit;
+}
+
+.map__title {
+  margin-bottom: 10px;
+}
+
+.map__wrap {
+  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+
+.map__iframeMap,
+.map__building {
+  width: calc((100% - 20px) / 2);
+  height: 400px;
+}
+
+.map__imgBuilding {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+}
+
+.map__welcome {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "MAK";
+  font-size: 72px;
+  font-weight: 300;
+  transition: transform 0.45s ease;
+}
+
+@keyframes fadeWelcomeIn {
+  0% {
+    opacity: 0;
+    color: white;
+    transform: scale(0);
+  }
+
+  50% {
+    opacity: 1;
+    color: crimson;
+    transform: scale(1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .map__wrap {
+    justify-content: center;
+    text-align: center;
+  }
+  .map__building {
+    display: none;
+    width: 0;
+    height: 0;
+    color: transparent;
+    background-color: transparent;
+  }
+
+  .map__iframeMap {
+    width: 90%;
+  }
+
+  .map__welcome {
+    font-size: 64px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .map {
+    height: calc(100vh + 320px);
+    color: white;
+  }
+
+  .map__iframeMap {
+    height: 250px;
+  }
+
+  .map__welcome {
+    font-size: 36px;
+  }
+}

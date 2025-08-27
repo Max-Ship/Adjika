@@ -1,0 +1,104 @@
+.withUs {
+  background-color: rgb(248, 247, 245);
+}
+
+.withUs__title {
+  color: black;
+}
+
+.swiperContainer {
+  width: 100%;
+  height: 450px;
+  border-radius: 32px;
+}
+
+.swiperList,
+.swiperList__item {
+  height: 100%;
+}
+
+.swiperList__item {
+  border-radius: 32px;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: aliceblue;
+}
+
+.swiperList__descr {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: inherit;
+}
+
+.swiperList__item--background1 {
+  background: url("/img/banquet.jpg") no-repeat center / cover;
+}
+
+.swiperList__item--background2 {
+  background: url("/img/wine.jpg") no-repeat center / cover;
+}
+
+.swiperList__item--background3 {
+  background: url("/img/cc.jpg") no-repeat center / cover;
+}
+
+.swiperList__item--background4 {
+  background: url("/img/dessert.jpg") no-repeat center / cover;
+}
+
+.swiper-pagination-bullet {
+  width: 15px;
+  height: 15px;
+  background: rgba(255, 215, 0, 0.7);
+  opacity: 1;
+  border-radius: 50%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  margin: 0 6px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #ffd700;
+  transform: scale(1.3);
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.8);
+}
+
+@media screen and (max-width: 1023.99px) {
+  .swiperContainer {
+    height: 370px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiperContainer {
+    height: 340px;
+  }
+
+  .swiperList__item {
+    font-size: 30px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .swiperContainer {
+    height: 300px;
+  }
+
+  .swiperList__item {
+    border-radius: 36px;
+    font-size: 24px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 7px;
+    height: 7px;
+  }
+}

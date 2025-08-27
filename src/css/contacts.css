@@ -1,0 +1,87 @@
+.contacts {
+  font-family: "TildaSans";
+  background-color: rgb(248, 247, 245);
+}
+
+.contacts__title {
+  margin-bottom: 5px;
+  text-align: center;
+  font-family: inherit;
+}
+
+.contacts__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+.contacts__textAddress,
+.contacts__linkAddress,
+.contacts__address {
+  position: relative;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.contacts__textAddress,
+.contacts__linkAddress {
+  transition: color 0.4s ease, text-shadow 0.4s ease;
+}
+
+.contacts__linkAddress::after,
+.contacts__textAddress::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  border-radius: 5px;
+  background: linear-gradient(90deg, #ffcc00, #ff6600);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+}
+
+.contacts__linkAddress:focus,
+.contacts__textAddress:focus {
+  color: #ffcc00;
+  text-shadow: 0 0 5px #ffcc00;
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts__linkAddress:hover,
+  .contacts__textAddress:hover {
+    color: #ff6600;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .contacts__linkAddress:hover::after,
+  .contacts__textAddress:hover::after {
+    transform: scaleX(1);
+  }
+}
+
+.contacts__linkAddress:active,
+.contacts__textAddress:active {
+  color: #b24000;
+  text-shadow: none;
+  transform: translateY(2px);
+  transition: transform 0.1s ease, color 0.1s ease;
+}
+
+@media screen and (max-width: 576px) {
+  .contacts__container {
+    gap: 17px;
+  }
+  .contacts__textAddress,
+  .contacts__linkAddress,
+  .contacts__address {
+    font-size: 18px;
+    line-height: 1.35;
+  }
+}

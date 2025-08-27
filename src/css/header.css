@@ -1,0 +1,138 @@
+.header {
+  padding: 30px 0;
+}
+
+.header__container,
+.header__listNavLink {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header__imgLogo {
+  border-radius: 8px;
+}
+
+.header__link {
+  display: inline-block;
+  font-family: "TildaSans";
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.header__link:focus {
+  outline-offset: 4px;
+  border-radius: 8px;
+  outline: 2px solid red;
+}
+
+@media screen and (min-width: 1024px) {
+  .header__link:hover {
+    color: rgba(5, 205, 205, 0.9);
+  }
+}
+
+.header__link:active {
+  color: #ffcc00;
+  text-shadow: 0 0 5px #ffcc00;
+}
+
+@media screen and (max-width: 576px) {
+  .header {
+    padding: 15px 0;
+  }
+
+  .header__imgLogo {
+    display: none;
+  }
+
+  .header__container {
+    justify-content: space-between;
+    padding: 0 30px;
+  }
+
+  .header__nav {
+    position: relative;
+    padding: 5px;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    border: 1.5px solid #4a4a4a;
+    background: linear-gradient(90deg, #6b6b6b, #9b3a3a, #3a3a3a),
+      repeating-radial-gradient(
+        circle at 0 0,
+        rgba(255, 150, 140, 0.05),
+        rgba(255, 150, 140, 0.05) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .header__nav::before,
+  .header__nav::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    display: block;
+    width: 30px;
+    height: 2px;
+    background-color: blue;
+    transition: transform 0.4s ease;
+    z-index: 3;
+  }
+
+  .header__nav::before {
+    top: 14px;
+  }
+
+  .header__nav::after {
+    top: 22px;
+  }
+
+  .header__listNavLink {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    width: 100vw;
+    min-height: min-content;
+    border-radius: 0 0 32px 32px;
+    transform: scale(0);
+    transform-origin: left top;
+    transition: transform 0.4s ease, opacity 0.4s ease-in-out;
+    background: linear-gradient(90deg, #333333, #551111, #111111),
+      repeating-radial-gradient(
+        circle at 0 0,
+        rgba(255, 100, 90, 0.06),
+        rgba(255, 100, 90, 0.06) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+    opacity: 0;
+    z-index: 1;
+  }
+
+  .header__nav.openNav::before {
+    transform: translateY(4px) rotate(45deg);
+  }
+
+  .header__nav.openNav::after {
+    transform: translateY(-4px) rotate(-45deg);
+  }
+
+  .header__nav.openNav .header__listNavLink {
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  .header__telLink {
+    padding: 12px 28px;
+  }
+}
