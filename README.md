@@ -30,7 +30,7 @@
 ## 💻 Как запустить локально
 1. Склонировать репозиторий: 
    ```bash
-    git clone https://github.com
+    git clone https://github.com/Max-Ship/Adjika.git
 2. Перейдите в директорию проекта:
    ```bash
     cd Adjika
